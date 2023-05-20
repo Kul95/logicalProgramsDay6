@@ -5,6 +5,7 @@ public class LogicalProgramsDay6 {
         fibonacciSeries();
         perfectNumber();
         primeNumber();
+        reverseNumber();
     }
     public static void fibonacciSeries(){
         System.out.println("Enter the number:");
@@ -51,5 +52,17 @@ public class LogicalProgramsDay6 {
         }else{
             System.out.println(number+" : is a prime number.");
         }
+    }
+    public static void reverseNumber(){
+        System.out.println("Enter the number:");
+        Scanner sc=new Scanner(System.in);
+        int number=sc.nextInt();
+        int rev=0;
+        while(number>0){
+            int rem=number%10;
+            rev=rev*10+rem;
+            number=number/10;
+        }
+        System.out.println(rev);
     }
 }
