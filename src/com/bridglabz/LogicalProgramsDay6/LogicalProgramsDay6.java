@@ -6,6 +6,7 @@ public class LogicalProgramsDay6 {
         perfectNumber();
         primeNumber();
         reverseNumber();
+        coupneCode();
     }
     public static void fibonacciSeries(){
         System.out.println("Enter the number:");
@@ -64,5 +65,20 @@ public class LogicalProgramsDay6 {
             number=number/10;
         }
         System.out.println(rev);
+    }
+    public static void coupneCode(){
+//    Scanner sc=new Scanner(System.in);
+//    String str=sc.next().toString();
+        char[] ch="123456789 abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+        int max=4555;
+        int random= (int)(Math.random()*max);
+        StringBuffer sb=new StringBuffer();
+        while (random>0)
+        {
+            sb.append(ch[random % ch.length]);
+            random=random/ch.length;
+        }
+        String cpCode=sb.toString();
+        System.out.println("Coupon Code: "+cpCode);
     }
 }
